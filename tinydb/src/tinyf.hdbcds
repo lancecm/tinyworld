@@ -1,0 +1,13 @@
+namespace tinyworld.tinydb;
+context tinyf {
+    /*@@layout{"layoutInfo":{"x":12,"y":-52}}*/
+entity world {
+        key continent : String(100);
+    };
+
+/*@@layout{"layoutInfo":{"x":-353,"y":24.5}}*/
+entity country{
+ key name : String(100);
+partof : Association[0..1] to world  {continent};
+};
+};
