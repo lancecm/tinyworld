@@ -16,7 +16,7 @@ modules:
     provides:
       - name: tinyjs_api
         properties:
-          url: '${default-url}'
+          url: '${service-url}'
   - name: tinyUI
     type: html5
     path: tinyUI
