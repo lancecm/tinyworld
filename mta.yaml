@@ -16,7 +16,7 @@ modules:
     provides:
       - name: tinyjs_api
         properties:
-          url: '${default-url}'
+          service_url: '${default-url}'
   - name: tinyUI
     type: html5
     path: tinyUI
@@ -27,11 +27,6 @@ modules:
           name: tinyjs_be
           url: ~{service_url}
 
-  
-
-
-  
-      
 
 resources:
   - name: hdi-container
