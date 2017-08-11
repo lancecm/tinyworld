@@ -1,6 +1,6 @@
 ID: tinyworld
 _schema-version: '2.0'
-version: 1.0.0
+version: 2.0.0
 modules:
   - name: tinydb
     type: hdb
@@ -13,6 +13,7 @@ modules:
     requires:
       - name: tinydb
       - name: hdi-container
+      - name: tiny_uaa
     provides:
       - name: tinyjs_api
         properties:
@@ -21,11 +22,13 @@ modules:
     type: html5
     path: tinyUI
     requires:
+      - name: tiny_uaa
       - name: tinyjs_api
         group: destinations
         properties:
           name: tinyjs_be
           url: ~{service_url}
+          forwardAuthToken: true
 
 
 resources:
@@ -33,3 +36,7 @@ resources:
     properties:
       hdi-container-name: '${service-name}'
     type: com.sap.xs.hdi-container
+  - name: tiny_uaa
+    type: com.sap.xs.uaa
+    
+   
