@@ -38,5 +38,7 @@ resources:
     type: com.sap.xs.hdi-container
   - name: tiny_uaa
     type: com.sap.xs.uaa
+    parameters:
+      path: ./xs-security.json
     
    

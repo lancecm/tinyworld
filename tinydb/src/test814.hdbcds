@@ -1,0 +1,9 @@
+namespace tinyworld.tinydb;
+
+context test814 {
+    /*@@layout{"layoutInfo":{"x":12,"y":-52}}*/
+entity student {
+        key name : String(100);
+    };
+    
+};
